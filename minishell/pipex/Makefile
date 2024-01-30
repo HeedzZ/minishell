@@ -14,7 +14,7 @@ NAME		=	pipex
 
 CC			=	clang
 
-FLAG		=	-Wall -Wextra -Werror -g3
+FLAG		=	
 
 LIBFT_PATH	=	./libft/
 

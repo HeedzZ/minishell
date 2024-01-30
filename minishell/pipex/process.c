@@ -2,7 +2,7 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   process.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     *
+/*                                                    +:+ +:+         +:+     */
 /*   By: ymostows <ymostows@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:50:22 by ymostows          #+#    #+#             */
@@ -41,7 +41,6 @@ void	childs(t_pipex pipex, char *argv[], char *envp[])
 	pipex.pid = fork();
 	if (!pipex.pid)
 	{
-		printf("Proc:%d\n", pipex.i_pid);
 		if (pipex.i_pid == 0)
 			double_dup2(pipex.infile, pipex.pipes[1]);
 		else if (pipex.i_pid == pipex.nb_cmd - 1)
